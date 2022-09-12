@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+<div class="container">
+  <div class="slideshow">
+   <div class="slide">
+      <img src="images/1.png" alt="">
+   </div>
+
+   <div class="slide">
+      <img src="images/1.png" alt="">
+   </div>
+
+   <div class="slide">
+      <img src="images/2.png" alt="">
+   </div>
+
+   <div class="slide">
+      <img src="images/3.png" alt="">
+   </div>
+
+   <div class="slide">
+      <img src="images/4.png" alt="">
+   </div>
+
+   <div class="slide">
+      <img src="images/6.png" alt="">
+   </div>
+  </div> 
+</div>
+            
+  <script>
+  const slider=document.querySelectorAll(".slide");
+ 
+ 
+
+  let count=0;
+  setInterval(myFunctionm,2000);
+  function myFunctionm(){
+   if(slider.length>count){
+      count++;
+      slider.forEach((slide)=>{
+        
+         slide.style.transform=`translateX(-${count*100}%)`
+      })
+      if(count===slider.length-1){
+         count=-1;
+      }
+   }
+  }
+ 
+  </script>               
+</body>
+</html>
